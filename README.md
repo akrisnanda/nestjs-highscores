@@ -1,6 +1,6 @@
 
 <p align="center">
-  <h3Leaderboard Backend Tech Challenge</h3>
+  <h3>Leaderboard Backend Tech Challenge</h3>
   By: Andry Krisnanda
 </p>
 
