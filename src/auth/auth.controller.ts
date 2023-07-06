@@ -17,7 +17,7 @@ import {
   
     @HttpCode(HttpStatus.OK)
     @Post('login')
-    signIn(@Body() signInDto: Record<string, any>) {
+    signIn(@Body() signInDto: Record<string, unknown>) {
       return this.authService.signIn(signInDto.username, signInDto.password);
     }
   
