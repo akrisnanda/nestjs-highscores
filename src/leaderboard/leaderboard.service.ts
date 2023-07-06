@@ -1,4 +1,4 @@
-import { Injectable, Inject } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Leaderboard } from './leaderboard.entity/leaderboard.entity';
@@ -9,7 +9,7 @@ export class LeaderboardService {
 
     constructor(@InjectRepository(Leaderboard) private usersRepository: Repository<Leaderboard>) { }
 
-    async getUsers(user: Leaderboard): Promise<Leaderboard[]> {
+    async getUsers(): Promise<Leaderboard[]> {
         return await this.usersRepository.find();
     }
 
@@ -22,15 +22,15 @@ export class LeaderboardService {
         });
     }
 
-    async saveLeaderboard(leaderboard: Leaderboard) {
+    saveLeaderboard(leaderboard: Leaderboard) {
         this.usersRepository.save(leaderboard)
     }
         
-    async updateUser(user: Leaderboard) {
+    updateUser(user: Leaderboard) {
         this.usersRepository.save(user)
     }
 
-    async deleteUser(user: Leaderboard) {
+    deleteUser(user: Leaderboard) {
         this.usersRepository.delete(user);
     }
 }

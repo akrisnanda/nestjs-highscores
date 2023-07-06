@@ -1,8 +1,8 @@
-import { Controller, Post, Body, Get, Put, Delete,Param, UseGuards} from '@nestjs/common';
+import { Controller, Post, Body, Get, UseGuards} from '@nestjs/common';
 import { LeaderboardService } from './leaderboard.service';
 import { Leaderboard } from './leaderboard.entity/leaderboard.entity';
 import { AuthGuard } from '../auth/auth.guard';
-import { AuthService } from '../auth/auth.service';
+// import { AuthService } from '../auth/auth.service';
 
 // @Controller('auth')
 @Controller('leaderboard')
