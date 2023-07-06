@@ -4,6 +4,26 @@
   By: Andry Krisnanda
 </p>
 
+## How to use
+```bash
+login with JWT: 
+POST: http://localhost:3000/auth/login
+ --header 'Content-Type: application/json'
+ --data '{"username": "andry", "password": "admin"}'
+
+get highscores:
+GET: http://localhost:3000/leaderboard
+ --header 'Authorization: Bearer 1NiIsInR5cCI6IkpXVCJ9.EsInVzZXJuYW1lIjoiYW5kcnkiLCJpYXQiOjE2ODgzODE4NzYsImV4cCI6MTY4ODM4MTkzNn0.C6yfbnBYajc61gbgH53c'
+ 
+post highscores:
+POST: http://localhost:3000/leaderboard
+ --header 'Content-Type: application/json'
+ --header 'Authorization: Bearer 1NiIsInR5cCI6IkpXVCJ9.EsInVzZXJuYW1lIjoiYW5kcnkiLCJpYXQiOjE2ODgzODE4NzYsImV4cCI6MTY4ODM4MTkzNn0.C6yfbnBYajc61gbgH53c' 
+ --data '{
+        "high_score": 30,
+        "lead_name": "Andre"
+    }'
+```
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
